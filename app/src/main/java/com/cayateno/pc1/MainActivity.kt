@@ -27,6 +27,7 @@ class MainActivity : ComponentActivity() {
                 color = Color.White
             ) {
                 TarjetaPresentacion()
+                Contacto()
             }
         }
     }
@@ -56,10 +57,44 @@ fun TarjetaPresentacion() {
             color = Color.Black
         )
         Text(
-            text = "el mejor jugador de la historia",
+            text = "el 2do mejor jugador de la historia",
             fontSize = 16.sp,
             fontWeight = FontWeight.Medium,
             color = Color.Gray
         )
     }
 }
+
+@Composable
+fun ItemContacto(iconResId: Int, contactText: String) {
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        modifier = Modifier.padding(vertical = 4.dp)
+    ) {
+        Image(
+            painter = painterResource(iconResId),
+            contentDescription = null,
+            modifier = Modifier.size(20.dp)
+        )
+        Spacer(modifier = Modifier.width(8.dp))
+        Text(
+            text = contactText,
+            fontSize = 14.sp,
+            color = Color.Black
+        )
+    }
+}
+
+@Composable
+fun Contacto() {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        ItemContacto(R.drawable.cel, "+51 935 777 057")
+        Spacer(modifier = Modifier.height(16.dp))
+        ItemContacto(R.drawable.ig, "@messiregalos")
+        Spacer(modifier = Modifier.height(16.dp))
+        //Completar
+    }
+}
+
