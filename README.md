@@ -1,0 +1,1 @@
+Este proyecto presenta una sencilla tarjeta de presentacion desarrollada en Android utilizando Jetpack Compose. La aplicación muestra información básica del jugadro Leonel Messi con sus datos de contacto y redes.
