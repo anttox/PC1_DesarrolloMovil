@@ -27,7 +27,6 @@ class MainActivity : ComponentActivity() {
                 color = Color.White
             ) {
                 TarjetaPresentacion()
-                Contacto()
             }
         }
     }
@@ -43,7 +42,7 @@ fun TarjetaPresentacion() {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Image(
-            painter = painterResource(id = R.drawable.img), // Usa el nombre exacto
+            painter = painterResource(id = R.drawable.lionel),
             contentDescription = "Foto de perfil",
             modifier = Modifier
                 .size(100.dp)
@@ -62,6 +61,10 @@ fun TarjetaPresentacion() {
             fontWeight = FontWeight.Medium,
             color = Color.Gray
         )
+
+        Spacer(modifier = Modifier.height(20.dp))
+
+        Contacto()
     }
 }
 
@@ -94,7 +97,6 @@ fun Contacto() {
         Spacer(modifier = Modifier.height(16.dp))
         ItemContacto(R.drawable.ig, "@messiregalos")
         Spacer(modifier = Modifier.height(16.dp))
-        //Completar
+        ItemContacto(R.drawable.gmail, "lionelmessi10@gmail.com")
     }
 }
-
